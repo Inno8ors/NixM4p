@@ -1,0 +1,27 @@
+:root{
+  --bg:#0f1320; --panel:#11182b; --accent:#2dd4bf; --text:#e5e7eb; --muted:#9aa4bf; --border:#263152;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+.topbar{position:absolute;top:0;left:0;right:320px;height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:#0b1224;border-bottom:1px solid var(--border);z-index:500}
+.brand{font-weight:700;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
+.brand .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.controls{display:flex;align-items:center;gap:8px}
+.controls button{background:#141b31;color:#cdd3ea;border:1px solid var(--border);padding:6px 8px;border-radius:10px;cursor:pointer}
+.status{font-size:12px;color:var(--muted);margin-left:10px}
+.count{font-size:12px;color:#cdd3ea}
+#map{position:absolute;inset:54px 320px 0 0}
+.panel{position:absolute;top:0;right:0;width:320px;bottom:0;background:#0b1224;border-left:1px solid var(--border);padding:12px 12px 18px;overflow:auto}
+.p-head{display:flex;gap:10px;align-items:center;padding:6px 4px;border-bottom:1px solid var(--border);margin-bottom:8px}
+.p-head img{width:42px;height:42px;border-radius:10px;background:#0e1832;border:1px solid #1d2846}
+.p-title{font-weight:700}
+.p-time{color:var(--muted);font-size:12px}
+.panel-inner{display:flex;flex-direction:column;gap:10px}
+.panel-row{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:center}
+.panel-k{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.panel-v{font-weight:600}
+.tag{background:#223059;border:1px solid #2a3b6a;padding:2px 6px;border-radius:999px;font-size:11px;margin-left:6px}
+.legend{margin-top:10px;background:#0e1832;border:1px solid var(--border);padding:8px 10px;border-radius:12px;font-size:12px}
+.bus-marker img{width:36px;height:36px}
+.emoji-marker{filter:drop-shadow(0 2px 4px rgba(0,0,0,.35))}
+.leaflet-control-layers{max-height:280px;overflow:auto}

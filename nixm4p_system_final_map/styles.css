@@ -1,0 +1,206 @@
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #ecf0f1;
+}
+
+/* Section Styling */
+section {
+    background-color: #ffffff;
+    margin: 30px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section h2 {
+    font-size: 1.7rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+section a {
+    font-size: 1.1rem;
+    color: #3498db;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+/* Map Section Styling */
+#leafletMap {
+    width: 100%;
+    height: 70vh; /* Make the map take most of the screen */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#leafletMap:hover {
+    transform: scale(1.05);
+}
+
+/* Alerts Button Styling */
+#alertsButton {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 200px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#alertsButton:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Popup Styling */
+#alertsPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    z-index: 1000;
+}
+
+#alertsPopup h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+#alertsPopup p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    line-height: 1.8;
+}
+
+#closePopupButton {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#closePopupButton:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    section {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    #leafletMap {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+}

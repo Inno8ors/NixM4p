@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>NixM4P · Monitoreo en tiempo real</title>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span> NixM4P</div>
+    <div class="controls">
+      <button id="btnLocate" title="Mi ubicación">📍</button>
+      <button id="btnFollow" title="Seguir bus seleccionado">▶️</button>
+      <span class="muted small">Buses: <span id="busCount">0</span> • <span id="status">Inicializando…</span></span>
+    </div>
+  </header>
+
+  <main id="map"></main>
+
+  <aside id="panel">
+    <div class="panel-header">
+      <div class="bus-head">
+        <img id="p-img" src="assets/bus_a.png" alt="bus" />
+        <div>
+          <strong id="p-title">Selecciona un bus</strong>
+          <div id="p-time" class="muted">—</div>
+        </div>
+      </div>
+    </div>
+    <div id="p-body">
+      <div class="grid">
+        <div><span class="k">Ruta</span><span id="p-route" class="v">—</span></div>
+        <div><span class="k">Velocidad</span><span id="p-speed" class="v">—</span></div>
+        <div><span class="k">Próx. Parada</span><span id="p-stop" class="v">—</span></div>
+        <div><span class="k">ETA</span><span id="p-eta" class="v">—</span></div>
+      </div>
+      <div class="legend">
+        <div><span class="chip chip-bus"></span> Bus</div>
+        <div><span class="chip chip-stop"></span> Parada</div>
+        <div><span class="chip chip-route"></span> Ruta</div>
+      </div>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>

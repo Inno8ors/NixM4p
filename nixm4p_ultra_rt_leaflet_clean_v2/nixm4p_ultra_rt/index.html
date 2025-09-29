@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NixM4P · Monitoreo en tiempo real</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span> NixM4P</div>
+    <div class="controls"><button id="btnAddPoi" title="Añadir punto">➕ POI</button><button id="btnExport" title="Exportar POIs">💾</button>
+      <button id="btnLocate" title="Mi ubicación">📍</button>
+      <button id="btnFollow" title="Seguir bus">▶</button>
+      <div id="status" class="status">Inicializando…</div>
+      <div class="count">Buses: <span id="busCount">0</span></div>
+    </div>
+  </header>
+
+  <div id="map"></div>
+
+  <aside class="panel">
+    <div class="p-head">
+      <img id="p-img" src="assets/bus_a.png" alt="bus"/>
+      <div>
+        <div id="p-title" class="p-title">Selecciona un bus</div>
+        <div id="p-time" class="p-time">—</div>
+      </div>
+    </div>
+    <div class="panel-inner">
+      <div class="panel-row">
+        <div class="panel-k">Ruta</div>
+        <div class="panel-v"><span id="p-route">—</span> <span id="p-routeCode" class="tag"></span></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-k">Velocidad</div>
+        <div class="panel-v"><span id="p-speed">—</span> km/h</div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-k">Próx. Parada</div>
+        <div class="panel-v"><span id="p-stop">—</span></div>
+      </div>
+      <div class="panel-row">
+        <div class="panel-k">ETA</div>
+        <div class="panel-v"><span id="p-eta">—</span></div>
+      </div>
+      <div class="legend card">
+        <b>Leyenda</b>
+        <div>🔵 Transporte</div>
+        <div>🟢 Salud</div>
+        <div>🔴 Emergencias</div>
+        <div>🟡 Referencias urbanas</div>
+        <div>♿ Inclusión</div>
+        <div>⭐ Valor agregado</div>
+      </div>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
